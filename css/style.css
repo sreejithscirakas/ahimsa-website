@@ -537,7 +537,7 @@ video {
 .section-getintouchbg {
     display: block;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: relative;
 }
 .section-getintouchbg img{
