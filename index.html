@@ -33,7 +33,6 @@
     <div class="section-about two" id="two">
       <div class="section-about-inner">
         <div class="about-mission">
-          <img src="./img/pb.svg" alt="Your Image" class="pb-image">
           <h4>Empowering communities and healthcare professionals through innovative digital solutions to enhance equitable health outcomes </h4>
         </div>
         <div class="about-center">
@@ -49,7 +48,6 @@
           </div>
         </div>
         <div class="about-vision">
-          <img src="./img/pg.svg" alt="Your Image" class="pg-image">
           <h4> To be a leader in transforming healthcare delivery by integrating community-driven, digital health solutions that ensure accessible, efficient, and personalised care for all, especially underserved populations. </h4>
         </div>
       </div>
@@ -59,7 +57,9 @@
       </div>
     </div>
     <div class="three" id="three">
+      
       <div class="section-allproduct-list">
+        <div class="section-allproduct-border">
         <div class="section-product-img">
           <img src="./img/bottom-img.png" alt="Your Image" class="about-img-bottom">
         </div>
@@ -82,6 +82,7 @@
           </div>
         </div>
       </div>
+    </div>
       <div class="product-detail">
         <div class="section-selected_product-b1 product-rh">
           <div class="section-selected_product-top">
@@ -255,7 +256,7 @@
           </div>
           <div class="form-textarea">
             <div class="textarea">
-              <textarea id="question" name="question" placeholder="Your questions here please." required></textarea>
+              <textarea id="question" name="question" rows="8" cols="50" placeholder="Your questions here please." required></textarea>
             </div>
             <div class="input-group-btn">
               <div class="getintouch-submit" type="submit">Get in touch</div>
@@ -286,26 +287,36 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript">
       window.addEventListener('scroll', function() {
-        const logo = document.querySelector('.logo');
-        const text = document.querySelector('.text');
-        const divOne = document.getElementById('one');
-        const divTwo = document.getElementById('two');
-        const divThree = document.getElementById('three');
-        const divTwoTop = divTwo.getBoundingClientRect().top;
-        const divThreeTop = divThree.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (divThreeTop <= 0) {
-          logo.style.opacity = '1';
-          text.classList.remove('scrolled');
-        } else if (divTwoTop <= 0) {
-          logo.style.opacity = '0';
-          text.classList.add('scrolled');
-        } else {
-          const opacityValue = Math.max(0, divTwoTop / windowHeight);
-          logo.style.opacity = opacityValue;
-          text.classList.remove('scrolled');
-        }
-      });
+    const logo = document.querySelector('.logo');
+    const text = document.querySelector('.text');
+    const divOne = document.getElementById('one');
+    const divTwo = document.getElementById('two');
+    const divThree = document.getElementById('three');
+    const divGetInTouch = document.getElementById('getin-touch'); // New div
+    const divTwoTop = divTwo.getBoundingClientRect().top;
+    const divThreeTop = divThree.getBoundingClientRect().top;
+    const divGetInTouchTop = divGetInTouch.getBoundingClientRect().top; // New div position
+    const windowHeight = window.innerHeight;
+
+    if (divGetInTouchTop <= 0) {
+        logo.style.opacity = '0'; // Change opacity to 0 when in view
+        text.classList.add('scrolled');
+    } else if (divThreeTop <= 0) {
+        logo.style.opacity = '1'; // Change opacity back to 1 when scrolling back up
+        text.classList.remove('scrolled');
+    } else if (divTwoTop <= 0) {
+        logo.style.opacity = '0';
+        text.classList.add('scrolled');
+    } else {
+        const opacityValue = Math.max(0, divTwoTop / windowHeight);
+        logo.style.opacity = opacityValue;
+        text.classList.remove('scrolled');
+    }
+});
+
+
+
+
       
       
       document.addEventListener('DOMContentLoaded', function() {

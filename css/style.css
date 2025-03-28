@@ -17,12 +17,43 @@
     src: url('../font/Arima-Medium.woff2');
     font-display: swap
 }
+@font-face {
+    font-family: HelveticaNeue-Light;
+    src: url('../font/HelveticaNeue-Light.woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: Calibri-Bold;
+    src: url('../font/Calibri-Bold.woff2');
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: Calibri-Regular;
+    src: url('../font/Calibri-Regular.woff2');
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: Calibri-Light;
+    src: url('../font/Calibri-Light.woff2');
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: Aptos-SemiBold;
+    src: url('../font/Aptos-SemiBold.woff2');
+    font-style: normal;
+    font-display: swap
+}
+
 
 body{
 	padding: 0;
 	margin: 0;
 	background: #000;
-	font-family: HelveticaNeue-Light;
 }
 header{
 	justify-content: space-between;
@@ -34,7 +65,7 @@ header{
     z-index: 100;
 }
 .logo{
-	height:70px;
+	height:80px;
 }
 .logo img{
 	height:100%;
@@ -53,12 +84,14 @@ header{
     background: #fff;
     gap: 50px;
 }
-.getin-touch{
-	padding: 10px 25px;
+.getin-touch {
+    padding: 12px 25px;
     border-radius: 30px;
     background: #009193;
-    color:#fff;
+    color: #fff;
     cursor: pointer;
+    font-family: Aptos-SemiBold;
+    font-size: 14px;
 }
 .section-hero{
 	height:100vh;
@@ -101,10 +134,11 @@ header{
     transform: translate(-0%, 3%);
 }
 .hero-below-txt{
-	padding-left: 10%;
+	padding-left: 6.2em;
     padding-top: 3%;
     font-size: 32px;
     color:#009193;
+    font-family: Calibri-Bold;
 }
 .section-about{
 	height: 100vh;
@@ -123,9 +157,10 @@ header{
 .about-mission h4, .about-vision h4{
 	color:#fff;
 	letter-spacing: 2px;
-    font-weight: 400;
     line-height: 35px;
-    font-size: 20px;
+    font-size: 1.2em;
+    font-family: Calibri-Light;
+    font-weight: 600;
 }
 .about-vision {
     background: #005354;
@@ -135,6 +170,32 @@ header{
     align-items: center;
     display: flex;
     padding: 0% 3% 0% 7.8%;
+}
+.about-vision::before{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/pg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 20%;
+    top: -3.6em;
+}
+.about-mission::before{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/pb.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 15%;
+    top: -3.5em;
 }
 .about-center {
     display: flex;
@@ -163,21 +224,23 @@ header{
     background: #009051;
 }
 .ft-icon{
-	height:50px;
+	height: 4em;
 }
 .ft-txt1{
 	width: 100px;
     text-align: left;
     padding: 10px;
     color:#fff;
-    font-size: 20px;
+    font-size: 1.5em;
+    font-family: Calibri-Regular;
 }
 .ft-txt2{
 	width: 100px;
     text-align: right;
     padding: 10px;
     color:#fff;
-    font-size: 20px;
+    font-size: 1.5em;
+    font-family: Calibri-Regular;
 }
 .ft-icon img{
 	height: 100%;
@@ -188,14 +251,14 @@ header{
     height: auto;
     position: absolute;
     z-index: 2;
-    transform: translate(-3%, -424%);
+    top: -59px;
 }
 .pb-image {
     width: 12%;
     height: auto;
     position: absolute;
     z-index: 2;
-    transform: translate(-3%, -387%);
+    top: -51px;
 }
 .section-about-line{
 	width:100%;
@@ -218,6 +281,7 @@ header{
 	font-size: 30px;
     color: #009193;
     margin-bottom: 15px;
+    font-family: 'Calibri-Regular';
 }
 .section-about-inner {
     display: flex;
@@ -257,6 +321,8 @@ header{
     position: relative;
     display: inline-block;
     cursor: pointer;
+    font-size: 1.5em;
+
 }
 .section-product1-img img, 
 .section-product2-img img,
@@ -277,16 +343,41 @@ header{
     padding: 5px;
     border-radius: 5px;
     text-align: center;
-    font-weight: 400;
-    font-size: 12px;
+    font-size: 0.8em;
     letter-spacing: 1px;
+    font-family: Calibri-Light;
+    font-weight: 400;
+    text-wrap-mode: wrap;
+    word-break: break-word;
+    width: 6em;
+
 }
-.section-allproduct-list{
+.product-detail{
+    height:100vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+.section-allproduct-list {
     display: flex;
     align-items: flex-end;
     width: 100%;
+    height: 100vh;
+}
+.section-selected_product-b1,
+.section-selected_product-b2,
+.section-selected_product-b3,
+.section-selected_product-b4{
+    width: 100%;
+}
+.section-allproduct-border{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    height: calc(100vh - 24%);
     border-bottom: solid 2px #009193;
-    padding-top: 15%;
+    margin-bottom: 10%;
 }
 .selected-more-products{
     display: flex;
@@ -325,7 +416,8 @@ header{
     text-align: center;
     line-height: 35px;
     letter-spacing: 2px;
-    font-weight: 400;
+    font-family: Calibri-Light;
+    font-size: 18px;
 }
 .section-selected_product-center{
     display: flex;
@@ -351,11 +443,12 @@ header{
     padding: 5px;
     border-radius: 5px;
     text-align: center;
-    font-weight: 400;
-    font-size: 14px;
     color: #fff;
     letter-spacing: 2px;
     line-height: 20px;
+    font-family: Calibri-Light;
+    font-size: 1em;
+    font-weight: 400;
 }
 .hideproductlist, .hideproduct{
     display: none;
@@ -384,17 +477,19 @@ header{
 .section-experiences-txt1 {
     font-weight: 600;
     width: 35%;
-    font-size: 35px;
-    line-height: 55px;
+    font-size: 3em;
+    line-height: 1.5em;
+    font-family: Calibri-Bold;
 }
 .section-experiences-txt2 {
     color: #009193;
-    font-weight: 400;
     line-height: 30px;
     letter-spacing: 2px;
     width: 65%;
-    font-size: 18px;
+    font-size: 1.5em;
     padding: 0% 10%;
+    font-family: 'Calibri-Regular';
+    font-weight: 400;
 }
 .exp-txt1{
     color:#7f7f7f;
@@ -438,13 +533,11 @@ video {
     padding: 0px;
     background: rgba(0, 0, 0, 0.5);
 }
-.section-selected_product-b1{
-    padding-bottom:8%;
-}
+
 .section-getintouchbg {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
 }
 .section-getintouchbg img{
@@ -454,12 +547,13 @@ video {
 .address {
     position: absolute;
     top: 27%;
-    right: 26%;
+    right: 235px;
     color: white;
     padding: 10px;
-    font-size: 25px;
+    font-size: 1.5em;
     line-height: 40px;
     font-family: Arima-Medium;
+
 }
 .form {
     position: absolute;
@@ -512,12 +606,10 @@ form ::-ms-input-placeholder {
             border: 1px solid #ccc;
             background: #009193;
             color:#fff !important;
-            border-radius: 4px;
+            border-radius: 1em;
             width: 100%;
             font-family: Arima-Medium;
-        }
-        textarea {
-            height: 100px; 
+            text-align: center;
         }
         button {
             background-color: #4CAF50;
@@ -534,15 +626,16 @@ form ::-ms-input-placeholder {
         .menu-items a{
             color:#000;
             text-decoration: none;
+            font-family: Aptos-SemiBold;
+            font-size: 16px;
         }
         .getin-touch a{
             color:#fff;
             text-decoration: none;
         }
         .input-group-btn{
-                display: flex
-;
-    justify-content: flex-end;
+            display: flex;
+            justify-content: center;
         }
 
 
@@ -596,6 +689,10 @@ form ::-ms-input-placeholder {
 }
 .form-textarea textarea{
     height:260px;
+}
+textarea::placeholder {
+    text-align: center;
+    line-height: 260px
 }
 #popup-txt{
     display: none;
@@ -651,4 +748,5 @@ form ::-ms-input-placeholder {
     z-index: 100;
     text-align: center;
     font-size: 12px;
+    font-family: Calibri-Light;
 }
