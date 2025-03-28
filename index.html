@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahimsa</title>
+    <link rel="icon" type="image" href="logo.svg">
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
@@ -292,17 +293,17 @@
     const divOne = document.getElementById('one');
     const divTwo = document.getElementById('two');
     const divThree = document.getElementById('three');
-    const divGetInTouch = document.getElementById('getin-touch'); // New div
+    const divGetInTouch = document.getElementById('getin-touch'); 
     const divTwoTop = divTwo.getBoundingClientRect().top;
     const divThreeTop = divThree.getBoundingClientRect().top;
-    const divGetInTouchTop = divGetInTouch.getBoundingClientRect().top; // New div position
+    const divGetInTouchTop = divGetInTouch.getBoundingClientRect().top; 
     const windowHeight = window.innerHeight;
 
     if (divGetInTouchTop <= 0) {
-        logo.style.opacity = '0'; // Change opacity to 0 when in view
+        logo.style.opacity = '0'; 
         text.classList.add('scrolled');
     } else if (divThreeTop <= 0) {
-        logo.style.opacity = '1'; // Change opacity back to 1 when scrolling back up
+        logo.style.opacity = '1'; 
         text.classList.remove('scrolled');
     } else if (divTwoTop <= 0) {
         logo.style.opacity = '0';
@@ -357,35 +358,35 @@ const nestedProductDetails = {
 
 document.querySelectorAll('.section-product1-img, .section-product2-img, .section-product3-img, .section-product4-img').forEach(item => {
     item.addEventListener('click', () => {
-        // Hide all product detail divs
+        
         document.querySelectorAll('.product-rh, .product-pr, .product-wl, .product-dh').forEach(detail => {
             detail.style.display = 'none';
         });
 
-        // Show the corresponding product detail div
+        
         const detailClass = productDetails[item.classList[0]];
         document.querySelector(`.${detailClass}`).style.display = 'block';
 
-        // Smooth scroll to the product detail section
+        
         document.querySelector('.product-detail').scrollIntoView({ behavior: 'smooth' });
     });
 });
 
-// Nested click event listeners for product details
+
 Object.keys(nestedProductDetails).forEach(className => {
     document.querySelector(`.${className}`).addEventListener('click', () => {
-        // Hide all product detail divs
+        
         document.querySelectorAll('.product-rh, .product-pr, .product-wl, .product-dh').forEach(detail => {
             detail.style.display = 'none';
         });
 
-        // Show the corresponding product detail div
+        
         const detailClass = nestedProductDetails[className];
         document.querySelector(`.${detailClass}`).style.display = 'block';
     });
 });
 
-// Show product-rh on page load
+
 window.onload = () => {
     document.querySelector('.product-rh').style.display = 'block';
 };
