@@ -21,6 +21,12 @@
         <div class="getin-touch text" id="showPopupBtn">
           <span>Get in touch</span>
         </div>
+        <div class="menu-closeicon">
+          <img src="./img/close.svg">
+        </div>
+      </div>
+      <div class="menu-icon">
+          <img src="./img/menu.svg">
       </div>
     </header>
     <div class="section-hero one" id="one">
@@ -390,6 +396,49 @@ Object.keys(nestedProductDetails).forEach(className => {
 window.onload = () => {
     document.querySelector('.product-rh').style.display = 'block';
 };
+
+document.querySelector('.menu-icon').onclick = function() {
+    const menu = document.querySelector('.menu');
+    const menuicon = document.querySelector('.menu-icon');
+    menu.style.opacity = '1';
+    menu.style.zIndex = '1';
+    menuicon.style.zIndex = '0';
+};
+
+// Function to change opacity to 0
+function hideMenu() {
+    const menu = document.querySelector('.menu');
+    const menucloseicon = document.querySelector('.menu-closeicon');
+    const menuicon = document.querySelector('.menu-icon');
+    menu.style.opacity = '0';
+    menucloseicon.style.zIndex = '0';
+    menuicon.style.zIndex = '1';
+
+}
+
+// Event listener for the close icon
+document.querySelector('.menu-closeicon').onclick = hideMenu;
+
+// Function to add event listeners for menu items
+function addMenuItemListeners() {
+    const menuItems = document.querySelectorAll('.menu-items a');
+    menuItems.forEach(item => {
+        item.onclick = hideMenu; // Change opacity to 0 when any link is clicked
+    });
+}
+
+// Check screen width and add listeners if below 768px
+function checkScreenSize() {
+    if (window.innerWidth < 768) {
+        addMenuItemListeners(); // Add listeners for menu items
+    }
+}
+
+// Initial check on page load
+checkScreenSize();
+
+// Optional: Add event listener for window resize to re-check
+window.onresize = checkScreenSize;
 
     </script>
   </body>

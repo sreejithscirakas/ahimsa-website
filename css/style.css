@@ -136,7 +136,7 @@ header{
 .hero-below-txt{
 	padding-left: 6.2em;
     padding-top: 3%;
-    font-size: 32px;
+    font-size: 2em;
     color:#009193;
     font-family: Calibri-Bold;
 }
@@ -749,5 +749,191 @@ textarea::placeholder {
     text-align: center;
     font-size: 12px;
     font-family: Calibri-Light;
+}
+.menu-icon{
+    display: none;
+}
+.menu-closeicon{
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    .menu-icon{
+        opacity: 1;
+        height:3em;
+        z-index: 1;
+        display: block;
+    }
+    .menu-icon img{
+        height:100%;
+    }
+    .menu {
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: calc(100% - 40px);
+        padding: 20px;
+        background: #fff;
+        flex-wrap: wrap;
+    }
+    .menu-items{
+        flex-wrap: wrap;
+        width:100%;
+        padding: 10px 0px;
+        gap: 30px;
+    }
+    .menu-items a {
+        width:100%;
+    }
+    .menu-closeicon{
+        opacity: 1;
+        height: 3em;
+        position: fixed;
+        top: 1em;
+        right: 1em;
+        display: block;
+    }
+    .menu-closeicon img{
+        height:100%;
+    }
+    .section-selected_product-center h4 {
+        width: 80%;
+    }
+    .section-selected_product-bottom, 
+    .section-allproduct-border, 
+    .section-about-img{
+        flex-wrap: wrap;
+    }
+    .product-detail, .section-allproduct-list{
+        height: 100%;
+    }
+    .section-selected_product-top {
+        width: 225px;
+    }
+    .address {
+        top: 18%;
+        right: 2em;
+        font-size: 0.8em;
+        line-height: 18px;
+    }
+    .section-selected_product-top h4 {
+        bottom: 12px;
+        left: 0%;
+        width: 36%;
+        padding: 5px;
+        color: #fff;
+        line-height: 1.5em;
+        font-size: 0.7em;
+        text-wrap: pretty;
+        letter-spacing: 1px;
+    }
+    .product-dh h4{
+        word-wrap: break-word;
+    }
+    .image-container{
+        padding: 0px 20px;
+    }
+    .hero-below-txt {
+        padding-left: 0.7em;
+        padding-top: 3%;
+        font-size: 1.5em;
+    }
+    .section-product1-img, .section-product2-img, .section-product3-img, .section-product4-img {
+        height: auto;
+        width: 35%;
+    }
+    .section-product-img-list {
+        gap: 43px;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+    .selected-product-community{
+        display: none;
+    }
+    .selected-product-water{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .section-experiences-txt{
+        flex-wrap: wrap;
+    }
+    .section-experiences-txt2 {
+        line-height: 20px;
+        letter-spacing: 2px;
+        width: 100%;
+        font-size: 1em;
+        padding: 0% 0%;
+    }
+    .section-experiences-txt1 {
+        width: 100%;
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+    .selected-more-products{
+        justify-content: center;
+        width: 100%;
+        padding-top: 10%;
+        padding-right: 0%;
+    }
+    .section-experiences-img {
+        width: 160px;
+        padding: 0px 20px;
+    }
+    .logo {
+        height: 55px;
+    }
+    .section-selected_product-center{
+        height: auto;
+    }
+    .section-about{
+        display: none;
+    }
+    .section-product1-img h4, 
+    .section-product2-img h4, 
+    .section-product3-img h4, 
+    .section-product4-img h4 {
+        font-size: 0.6em;
+        letter-spacing: 0px;
+    }
+    .section-product-img {
+        width: 100%;
+        padding: 0px 60px;
+        transform: translate(0%, 0%);
+        border-bottom: solid 2px #009193;
+        margin-bottom: 15%;
+    }
+    .section-product-img img {
+        width: 100%;
+        transform: translate(0%, 3%);
+    }
+    .section-selected_product-center h4 {
+        letter-spacing: 1px;
+        font-size: 14px;
+    }
+    .selected-product-water img{
+        width: 60%;
+    }
+    video {
+        position: relative;
+        top: 0%;
+        left: 0%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 1;
+        transform: translate(0%, 0%);
+    }
+    .content {
+        height: auto;
+        position: relative;
+        z-index: 1;
+        padding: 0px;
+    }
+    .video-container{
+        height: auto;
+    }
 }
 
