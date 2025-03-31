@@ -756,6 +756,9 @@ textarea::placeholder {
 .menu-closeicon{
     display: none;
 }
+.txtmv{
+    display: none;
+}
 @media only screen and (max-width: 768px) {
     .menu-icon{
         opacity: 1;
@@ -887,9 +890,6 @@ textarea::placeholder {
     .section-selected_product-center{
         height: auto;
     }
-    .section-about{
-        display: none;
-    }
     .section-product1-img h4, 
     .section-product2-img h4, 
     .section-product3-img h4, 
@@ -934,6 +934,102 @@ textarea::placeholder {
     }
     .video-container{
         height: auto;
+    }
+    .getintouch-img{
+        display: none;
+    }
+    .popup .form, .form-textarea{
+        position: relative;
+        top: 0%;
+        width: 100%;
+        left: 0%;
+    }
+    .popup{
+        background:#fff;
+        width: 80%;
+        padding: 25px;
+        height: auto;
+        border-radius: 10px;
+    }
+    .input-group {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .textarea{
+        flex-direction: row;
+        display: flex;
+    }
+    #closePopupBtn, #closePopupBtntxt {
+        width: 70px;
+        position: fixed;
+        z-index: 101;
+        right: -1%;
+        top: 0%;
+        cursor: pointer;
+    }
+    .txt-left {
+        position: relative;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        z-index: 100;
+        color: #000000;
+    }
+    .txt-right {
+        position: relative;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        z-index: 100;
+        color: #000000;
+        text-align: left;
+    }
+    .section-about-inner {
+        display: flex
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .about-center{
+        display: none;
+    }
+    .about-vision {
+        background: #005354;
+        width: 100%;
+        height: auto;
+        transform: translate(0%, 8.5%);
+        align-items: center;
+        display: flex;
+        padding: 0% 3% 0% 7.8%;
+        margin-top: 25%;
+        flex-wrap: wrap;
+    }
+    .about-mission {
+        background: #156082;
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        padding: 0% 3% 0% 7%;
+    }
+    .about-vision::before,
+    .about-mission::before {
+        left:6%;
+    }
+    .ft-txt1,
+    .ft-txt2{
+        padding: 15px 0px 0px 0px;
+    }
+    .ft-txt2{
+        text-align: left;
+    }
+    .section-about-img{
+        display: none;
+    }
+    .section-about{
+        margin-bottom: 20%;
+        height:auto;
     }
 }
 
