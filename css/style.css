@@ -1034,5 +1034,11 @@ textarea::placeholder {
         margin-bottom: 20%;
         height:auto;
     }
+    .txtmv {
+        display: block;
+    }
+    .about-mission h4, .about-vision h4{
+        font-weight: 500;
+    }
 }
 
