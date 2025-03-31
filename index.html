@@ -404,6 +404,7 @@ document.querySelector('.menu-icon').onclick = function() {
     const menuicon = document.querySelector('.menu-icon');
     menu.style.opacity = '1';
     menu.style.zIndex = '1';
+    menu.style.display = 'block';
     menuicon.style.zIndex = '0';
 };
 
@@ -413,6 +414,7 @@ function hideMenu() {
     const menucloseicon = document.querySelector('.menu-closeicon');
     const menuicon = document.querySelector('.menu-icon');
     menu.style.opacity = '0';
+    menu.style.display = 'none';
     menucloseicon.style.zIndex = '0';
     menuicon.style.zIndex = '1';
 

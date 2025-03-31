@@ -771,6 +771,7 @@ textarea::placeholder {
     }
     .menu {
         opacity: 0;
+        display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -948,8 +949,10 @@ textarea::placeholder {
         background:#fff;
         width: 80%;
         padding: 25px;
-        height: auto;
         border-radius: 10px;
+        height: auto;
+        max-height: 80%;
+        overflow-y: auto;
     }
     .input-group {
         display: flex;
